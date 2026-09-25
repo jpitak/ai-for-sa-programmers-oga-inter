@@ -1,96 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for SA & Programmers - Presentation</title>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Regular.ttf') format('truetype'); font-weight: 400; }
-    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Bold.ttf') format('truetype'); font-weight: 700; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    .slide-container { 
-      width: 1280px; 
-      min-height: 720px; 
-      background: #1A2E46; 
-      display: flex; 
-      flex-direction: column; 
-      font-family: 'TH SarabunPSK', 'Sarabun', sans-serif;
-      position: relative;
-      color: #FFFFFF;
-      padding: 60px;
-    }
-    .motif-line {
-      position: absolute;
-      top: 0;
-      left: 0;
+    html, body {
       width: 100%;
-      height: 6px;
-      background: #D4AF37;
+      height: 100%;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #1A2E46;
+      color: #FFFFFF;
+      overflow: hidden;
     }
-    .content-center {
-      flex: 1;
+
+    /* App Container Layout */
+    .app-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      height: 100vh;
+      width: 100vw;
     }
-    .main-title {
-      font-size: 34.6px; /* 26 pt */
-      font-weight: 700;
-      color: #D4AF37;
-      margin-bottom: 20px;
-      line-height: 1.1;
-    }
-    .sub-title-th {
-      font-size: 21.3px; /* 16 pt */
-      font-weight: 400;
-      margin-bottom: 40px;
-    }
-    .course-code {
-      font-size: 24px;
-      color: #8D99AE;
-      margin-bottom: 60px;
-      letter-spacing: 2px;
-    }
-    .footer {
+
+    /* Top Navigation Header */
+    header {
+      background-color: #111E2E;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      align-items: flex-end;
+      align-items: center;
+      border-bottom: 3px solid #D4AF37;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      z-index: 10;
     }
-    .company-info {
-      text-align: left;
-    }
-    .company-name {
-      font-size: 24px;
+
+    .brand-title {
+      font-size: 18px;
       font-weight: 700;
       color: #D4AF37;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .dept-name {
-      font-size: 20px;
+
+    .brand-sub {
+      font-size: 12px;
+      color: #8D99AE;
+      font-weight: normal;
+    }
+
+    .controls-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    select {
+      font-family: 'Sarabun', sans-serif;
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #D4AF37;
+      background: #1A2E46;
+      color: #FFFFFF;
+      font-size: 14px;
+      outline: none;
+      max-width: 380px;
+      cursor: pointer;
+    }
+
+    button {
+      font-family: 'Sarabun', sans-serif;
+      padding: 6px 14px;
+      border-radius: 4px;
+      border: 1px solid #D4AF37;
+      background: #1A2E46;
+      color: #FFFFFF;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button:hover {
+      background: #D4AF37;
+      color: #1A2E46;
+      font-weight: bold;
+    }
+
+    button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      border-color: #8D99AE;
+      background: #1A2E46;
       color: #FFFFFF;
     }
-    .date-info {
-      font-size: 18px;
-      color: #8D99AE;
+
+    .btn-present {
+      background-color: #D4AF37;
+      color: #1A2E46;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-present:hover {
+      background-color: #FBF8EE;
+      color: #1A2E46;
+    }
+
+    /* Responsive Frame Viewport */
+    .viewport {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      background-color: #0b131c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 10px;
+    }
+
+    .slide-wrapper {
+      width: 100%;
+      height: 100%;
+      max-width: 1280px;
+      max-height: 720px;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Fullscreen Present Mode Style Adjustments */
+    :fullscreen .viewport {
+      padding: 0;
+    }
+    :fullscreen .slide-wrapper {
+      max-width: none;
+      max-height: none;
+      border-radius: 0;
     }
   </style>
 </head>
 <body>
-  <div class="slide-container">
-    <div class="motif-line"></div>
-    <div class="content-center">
-      <div class="course-code">AI TRAINING SERIES FOR PROFESSIONALS</div>
-      <h1 class="main-title">AI for SA & Programmers</h1>
-      <p class="sub-title-th">อบรมการนำ AI มาเพิ่มประสิทธิภาพในการทำงานสำหรับ SA และ Programmer</p>
-    </div>
-    <div class="footer">
-      <div class="company-info">
-        <div class="company-name">OGA INTERNATIONAL Co., Ltd.</div>
-        <div class="dept-name">Business Solution Department</div>
+
+  <div class="app-container" id="app">
+    <header>
+      <div class="brand-title">
+        <span>AI for SA & Programmers</span>
+        <span class="brand-sub">| OGA INTERNATIONAL</span>
       </div>
-      <div class="date-info">2026 EDITION</div>
+
+      <div class="controls-group">
+        <button id="prevBtn" onclick="changeSlide(-1)">❮ ย้อนกลับ</button>
+        
+        <select id="slideSelect" onchange="loadSlide(this.value)">
+          <option value="cover.html">01. Cover (หน้าปก)</option>
+          <option value="learning_outcomes.html">02. Learning Outcomes</option>
+          <option value="agenda.html">03. Course Roadmap / แผนการอบรม</option>
+          <option value="ai_at_work.html">04. AI at Work: The Operating Model</option>
+          <option value="responsible_ai.html">05. Responsible AI Principles</option>
+          <option value="sa_vs_programmer.html">06. SA vs Programmer Role</option>
+          <option value="prompt_anatomy.html">07. Prompt Anatomy & Structure</option>
+          <option value="prompt_template.html">08. Reusable Prompt Template</option>
+          <option value="quality_loop.html">09. Quality Loop & Iteration</option>
+          <option value="client_discovery.html">10. Client Discovery & Questions</option>
+          <option value="discovery_prompt.html">11. AI-Assisted Discovery Notes</option>
+          <option value="requirements_map.html">12. Requirements Mapping</option>
+          <option value="persona_journey.html">13. Persona & User Journey</option>
+          <option value="as_is_to_be.html">14. As-Is / To-Be Analysis</option>
+          <option value="gap_analysis.html">15. Gap Analysis Matrix</option>
+          <option value="use_case_canvas.html">16. Use Case Canvas</option>
+          <option value="user_story.html">17. User Story & Acceptance Criteria</option>
+          <option value="use_case_review.html">18. Use Case Review Checklist</option>
+          <option value="proposal_story.html">19. Proposal Storyline</option>
+          <option value="proposal_structure.html">20. Proposal Document Structure</option>
+          <option value="proposal_visuals.html">21. Proposal Visual Elements</option>
+          <option value="demo_script.html">22. Demo Script and Talk Track</option>
+          <option value="estimate_scope.html">23. Scope Estimation</option>
+          <option value="risk_register.html">24. Risk Register & Mitigation</option>
+          <option value="meeting_pack.html">25. Meeting Pack Preparation</option>
+          <option value="document_control.html">26. Document Control Standard</option>
+          <option value="iso9001_intro.html">27. ISO 9001 Compliance</option>
+          <option value="iso29001_intro.html">28. ISO 29001 Integration</option>
+          <option value="iso_document_map.html">29. ISO Document Mapping</option>
+          <option value="sop_prompt.html">30. SOP Generation Prompt</option>
+          <option value="work_instruction.html">31. Work Instruction Standard</option>
+          <option value="record_template.html">32. Record Template Framework</option>
+          <option value="iso_review.html">33. ISO Review Checklist</option>
+          <option value="data_handling.html">34. Data Handling & Confidentiality</option>
+          <option value="human_approval.html">35. Human Approval & Sign-off</option>
+          <option value="tool_landscape.html">36. AI Tool Landscape Summary</option>
+        </select>
+
+        <button id="nextBtn" onclick="changeSlide(1)">ถัดไป ❯</button>
+        <button class="btn-present" onclick="toggleFullScreen()">🖥️ Present Fullscreen</button>
+      </div>
+    </header>
+
+    <div class="viewport" id="viewport">
+      <div class="slide-wrapper">
+        <iframe id="slideFrame" src="cover.html"></iframe>
+      </div>
     </div>
   </div>
+
+  <script>
+    const slideSelect = document.getElementById('slideSelect');
+    const slideFrame = document.getElementById('slideFrame');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function loadSlide(url) {
+      slideFrame.src = url;
+      updateButtons();
+    }
+
+    function changeSlide(direction) {
+      let newIndex = slideSelect.selectedIndex + direction;
+      if (newIndex >= 0 && newIndex < slideSelect.options.length) {
+        slideSelect.selectedIndex = newIndex;
+        loadSlide(slideSelect.value);
+      }
+    }
+
+    function updateButtons() {
+      prevBtn.disabled = slideSelect.selectedIndex === 0;
+      nextBtn.disabled = slideSelect.selectedIndex === slideSelect.options.length - 1;
+    }
+
+    function toggleFullScreen() {
+      const elem = document.documentElement;
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // รองรับการควบคุมด้วยคีย์บอร์ด (ลูกศร ซ้าย-ขวา / Spacebar)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        changeSlide(-1);
+      } else if (e.key === 'ArrowRight' || e.key === ' ') {
+        changeSlide(1);
+      }
+    });
+
+    updateButtons();
+  </script>
+
 </body>
 </html>
