@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Bold.ttf') format('truetype'); font-weight: 700; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F8F9FA; 
+      display: flex; 
+      flex-direction: column; 
+      font-family: 'TH SarabunPSK', 'Sarabun', sans-serif;
+      position: relative;
+      padding: 48px;
+    }
+    .motif-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #D4AF37;
+    }
+    .header {
+      margin-bottom: 30px;
+    }
+    .slide-title {
+      font-size: 26.6px;
+      font-weight: 700;
+      color: #1A2E46;
+    }
+    .content-layout {
+      flex: 1;
+      display: flex;
+      gap: 40px;
+    }
+    .prompt-box {
+      flex: 1.5;
+      background: #FFFFFF;
+      border: 2px dashed #D4AF37;
+      padding: 30px;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      color: #212529;
+      line-height: 1.6;
+      border-radius: 8px;
+    }
+    .annotation-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .annotation-item {
+      background: #EFEFEF;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    .a-num { color: #D4AF37; font-weight: 700; margin-right: 10px; }
+    .a-en { font-weight: 700; color: #1A2E46; }
+    .a-th { font-size: 14px; color: #495057; }
+    .highlight { background: #FFF3CD; padding: 2px 4px; border-radius: 2px; }
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #8D99AE;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="motif-line"></div>
+    <div class="header">
+      <h2 class="slide-title">Prompt Anatomy / ส่วนประกอบของคำสั่ง AI ที่มีประสิทธิภาพ</h2>
+    </div>
+    <div class="content-layout">
+      <div class="prompt-box">
+        <p><span class="highlight">Act as a Senior SA.</span> [1]<br><br>
+        <span class="highlight">Analyze the attached meeting notes.</span> [2]<br><br>
+        <span class="highlight">Create a Functional Requirement Document</span> [3]<br>
+        <span class="highlight">specifically for a logistics system.</span> [4]<br><br>
+        <span class="highlight">Format: Markdown table, maximum 10 items.</span> [5]</p>
+      </div>
+      <div class="annotation-side">
+        <div class="annotation-item">
+          <span class="a-num">[1]</span><span class="a-en">ROLE (บทบาท)</span><br>
+          <span class="a-th">กำหนดความเชี่ยวชาญที่ต้องการจาก AI</span>
+        </div>
+        <div class="annotation-item">
+          <span class="a-num">[2]</span><span class="a-en">TASK (งาน)</span><br>
+          <span class="a-th">คำสั่งหลักที่ต้องการให้ AI ทำ</span>
+        </div>
+        <div class="annotation-item">
+          <span class="a-num">[3]</span><span class="a-en">OUTCOME (ผลลัพธ์)</span><br>
+          <span class="a-th">ผลงานที่ต้องการได้รับ</span>
+        </div>
+        <div class="annotation-item">
+          <span class="a-num">[4]</span><span class="a-en">CONTEXT (บริบท)</span><br>
+          <span class="a-th">ข้อมูลประกอบเพื่อให้คำตอบตรงประเด็น</span>
+        </div>
+        <div class="annotation-item">
+          <span class="a-num">[5]</span><span class="a-en">CONSTRAINT (ข้อจำกัด)</span><br>
+          <span class="a-th">กำหนดรูปแบบหรือขอบเขตของผลลัพธ์</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>OGA INTERNATIONAL | Business Solution</div>
+      <div>Slide 07</div>
+    </div>
+  </div>
+</body>
+</html>

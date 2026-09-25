@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Bold.ttf') format('truetype'); font-weight: 700; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F8F9FA; 
+      display: flex; 
+      flex-direction: column; 
+      font-family: 'TH SarabunPSK', 'Sarabun', sans-serif;
+      position: relative;
+      padding: 48px;
+    }
+    .motif-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #D4AF37;
+    }
+    .header {
+      margin-bottom: 30px;
+    }
+    .slide-title {
+      font-size: 26.6px;
+      font-weight: 700;
+      color: #1A2E46;
+    }
+    .content-split {
+      flex: 1;
+      display: flex;
+      gap: 50px;
+    }
+    .text-side {
+      flex: 1;
+    }
+    .concept-en { font-size: 24px; font-weight: 700; color: #1A2E46; margin-bottom: 15px; }
+    .concept-th { font-size: 18.6px; color: #495057; line-height: 1.6; margin-bottom: 30px; }
+    
+    .list-side {
+      flex: 1.2;
+      background: #FFFFFF;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .list-title { font-size: 20px; font-weight: 700; color: #D4AF37; margin-bottom: 20px; }
+    .question-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #DEE2E6;
+      display: flex;
+    }
+    .q-bullet { color: #D4AF37; margin-right: 15px; font-weight: 700; }
+    .q-text-en { font-weight: 700; color: #1A2E46; font-size: 16px; }
+    .q-text-th { color: #495057; font-size: 15px; }
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #8D99AE;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="motif-line"></div>
+    <div class="header">
+      <h2 class="slide-title">Client Discovery: Start with the Problem / การค้นหาความต้องการลูกค้า</h2>
+    </div>
+    <div class="content-split">
+      <div class="text-side">
+        <div class="concept-en">Evidence-Based Discovery</div>
+        <div class="concept-th">การวิเคราะห์ความต้องการไม่ใช่แค่การฟัง แต่คือการหา "หลักฐาน" (Evidence) ของปัญหาที่แท้จริง ก่อนที่จะเริ่มใช้ AI ในการร่างทางเลือก</div>
+        
+        <div class="concept-en">Role of AI in Discovery</div>
+        <div class="concept-th">AI ทำหน้าที่เป็น " sparring partner" ช่วยเตรียมคำถามที่แหลมคม และสรุปประเด็นสำคัญจากการสัมภาษณ์</div>
+      </div>
+      <div class="list-side">
+        <div class="list-title">Critical Questions for SA</div>
+        <div class="question-item">
+          <span class="q-bullet">?</span>
+          <div>
+            <div class="q-text-en">What is the specific pain point?</div>
+            <div class="q-text-th">ปัญหาหลักที่ลูกค้าพบคืออะไรกันแน่?</div>
+          </div>
+        </div>
+        <div class="question-item">
+          <span class="q-bullet">?</span>
+          <div>
+            <div class="q-text-en">Who are the main actors?</div>
+            <div class="q-text-th">ใครคือผู้ใช้งานหลักที่ได้รับผลกระทบ?</div>
+          </div>
+        </div>
+        <div class="question-item">
+          <span class="q-bullet">?</span>
+          <div>
+            <div class="q-text-en">What does success look like?</div>
+            <div class="q-text-th">ตัวชี้วัดความสำเร็จของระบบนี้คืออะไร?</div>
+          </div>
+        </div>
+        <div class="question-item">
+          <span class="q-bullet">?</span>
+          <div>
+            <div class="q-text-en">What are the constraints?</div>
+            <div class="q-text-th">ข้อจำกัดด้านเทคนิคและงบประมาณคืออะไร?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>OGA INTERNATIONAL | Business Solution</div>
+      <div>Slide 10</div>
+    </div>
+  </div>
+</body>
+</html>

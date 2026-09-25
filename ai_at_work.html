@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'TH SarabunPSK'; src: url('/home/ubuntu/manus-slides/ai-for-sa-programmers-oga-intern-mugezvda-5919217d/assets/fonts/THSarabunPSK-Bold.ttf') format('truetype'); font-weight: 700; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { 
+      width: 1280px; 
+      min-height: 720px; 
+      background: #F8F9FA; 
+      display: flex; 
+      flex-direction: column; 
+      font-family: 'TH SarabunPSK', 'Sarabun', sans-serif;
+      position: relative;
+      padding: 48px;
+    }
+    .motif-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #D4AF37;
+    }
+    .header {
+      margin-bottom: 40px;
+    }
+    .slide-title {
+      font-size: 26.6px;
+      font-weight: 700;
+      color: #1A2E46;
+    }
+    .diagram-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .quadrant {
+      background: #FFFFFF;
+      padding: 30px;
+      border: 1px solid #DEE2E6;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .quadrant::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 8px 8px 0 0;
+    }
+    .q-people::before { background: #1A2E46; }
+    .q-process::before { background: #D4AF37; }
+    .q-data::before { background: #8D99AE; }
+    .q-ai::before { background: #343A40; }
+    
+    .q-title-en { font-size: 24px; font-weight: 700; color: #1A2E46; margin-bottom: 10px; }
+    .q-desc-th { font-size: 18.6px; color: #495057; line-height: 1.5; }
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #8D99AE;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="motif-line"></div>
+    <div class="header">
+      <h2 class="slide-title">AI at Work: The Operating Model / รูปแบบการทำงานร่วมกับ AI</h2>
+    </div>
+    <div class="diagram-container">
+      <div class="quadrant q-people">
+        <div class="q-title-en">PEOPLE (SA & Programmer)</div>
+        <div class="q-desc-th">บุคลากรต้องมีทักษะการสั่งงาน (Prompting) และการตรวจสอบผลลัพธ์ที่แม่นยำ</div>
+      </div>
+      <div class="quadrant q-process">
+        <div class="q-title-en">PROCESS (Methodology)</div>
+        <div class="q-desc-th">กระบวนการทำงานที่นำ AI มาแทรกในทุกขั้นตอน ตั้งแต่การวิเคราะห์จนถึงการส่งมอบ</div>
+      </div>
+      <div class="quadrant q-data">
+        <div class="q-title-en">DATA (Context & Knowledge)</div>
+        <div class="q-desc-th">การให้ข้อมูลบริบทที่ถูกต้องแก่ AI เพื่อให้ได้ผลลัพธ์ที่ตรงตามความต้องการธุรกิจ</div>
+      </div>
+      <div class="quadrant q-ai">
+        <div class="q-title-en">AI TOOLS (Technology)</div>
+        <div class="q-desc-th">การเลือกใช้เครื่องมือที่เหมาะสม เช่น Copilot, Claude, หรือ Gemini ตามลักษณะงาน</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>OGA INTERNATIONAL | Business Solution</div>
+      <div>Slide 04</div>
+    </div>
+  </div>
+</body>
+</html>
